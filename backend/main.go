@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/joho/godotenv"
+	// "github.com/joho/godotenv"
 	"github.com/redis/go-redis/v9"
 )
 
