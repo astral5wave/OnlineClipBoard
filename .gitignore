@@ -17,7 +17,6 @@ backend/bin/
 backend/*.exe
 backend/*.out
 backend/*.test
-backend/go.sum
 
 # Environment files (Both frontend and backend)
 frontend/.env
