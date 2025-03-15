@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.scrollbar {
+  @apply overflow-y-scroll;
+}
+
+.scrollbar::-webkit-scrollbar {
+  @apply w-0;
+}
