@@ -13,7 +13,11 @@ I wanted a quick way to copy-paste text across devices without signing up or usi
 ## 🔹 How It Works?  
 1. Users can paste text, which gets stored temporarily.  
 2. A unique key is generated for access.  
-3. Data automatically expires after **10 minutes**.  
+3. Data automatically expires after **10 minutes**.
+
+## ⚠️ Important Note
+This backend runs on **Render's free tier**, which may **go to sleep after inactivity**.  
+**If accessing after a long time, the first request may take 30 sec ~ 1 min for server to wake up. So please have patience!**
 
 ---
 
