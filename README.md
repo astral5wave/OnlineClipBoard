@@ -6,7 +6,7 @@ OCB is a simple online clipboard that lets you temporarily store and access text
 I wanted a quick way to copy-paste text across devices without signing up or using third-party services. It was also a great opportunity to try **Go** and learn how to work with a **Redis-based key-value store** for temporary data storage.  
 
 ## 🛠 Tech Stack  
-- **Frontend:** React (Wails)  
+- **Frontend:** React (Vite)  
 - **Backend:** Go (Golang)  
 - **Database:** Redis (Upstash)  
 
