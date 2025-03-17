@@ -2,6 +2,14 @@ import { useState } from "react";
 import axios from "axios";
 import { FaRegClipboard } from "react-icons/fa6";
 import { ToastContainer, toast } from "react-toastify";
+
+const axiosInstance= axios.create({
+  baseURL:import.meta.env.VITE_BACKEND_URL || "http://localhost:8080",
+  timeout:5000,//used to send response time error if response not recieved within 10s
+  headers:{
+      "Content-Type":"application/json"
+  },
+});
 function App() {
   const [key, setKey] = useState("");
   const [value, setValue] = useState("");
@@ -27,7 +35,7 @@ function App() {
     try {
       const combinedPromise = new Promise(async (resolve, reject) => {
         try {
-          const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/save`, { value });
+          const response = await axiosInstance.post(`${import.meta.env.VITE_BACKEND_URL}/save`, { value });
           if (response && response.data && response.data.key) {
             resolve(response.data.key);
           }else{
@@ -65,7 +73,7 @@ function App() {
     try {
       const combinedPromise = new Promise(async (resolve, reject) => {
         try {
-          const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/get/${key}`);
+          const response = await axiosInstance.get(`${import.meta.env.VITE_BACKEND_URL}/get/${key}`);
           if (response && response.data && response.data.data) {
             resolve(response.data.data);
           }else{
